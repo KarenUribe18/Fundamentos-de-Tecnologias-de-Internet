@@ -1,0 +1,153 @@
+<html>
+    <head>
+    <body>
+        <title>PROTOCOLO HTTP.</title>
+        <div>
+        <h1>PROTOCOLO HTTP (HyperText Transfer Protocol). FUNCIONAMIENTO.</h1>
+        <p>Es un protocolo de transferencia sobre el que se basa la red informática mundial (WWW). Funciona como base para los intercambios de datos realizados en la web, y mantiene una estructura basada en los clientes y servidores y orientada a transacciones.</p>
+        <p>Fue diseñado para transmitir HTML (HyperText Markup Language) pero hoy en día se utiliza para transmitir todo tipo de documentos <b>(imágenes, audio, video, PDF, etc.)</b> y para crear aplicaciones Web.</p>
+        <p>Este protocolo fue inventado por Tim Berners-Lee entre los años 1989 y 1991 mientras trabajaba en el CERN, pero al paso de los años este protocolo ha evolucionado manteniendo la mayor parte de su simplicidad hasta el día de hoy con su versión más reciente HTTP/v2.</p>
+        </div>
+        <div>
+        <h2>ESTRUCTURA.</h2> 
+        <p>La arquitectura del protocolo HTTP, implica que programas clientes como Firefox, Chrome, Opera y Robots, establezcan conexión y realicen peticiones de datos a programas servidores como Apache, Nginx, entre otros. Estas peticiones son gestionadas y contestadas por los servidores, a través de intermediarios denominados proxies.</p>
+        <p>El protocolo HTTP está apoyado sobre los servidores de conexión TCP/IP, donde el protocolo TCP es el encargado de mantener la comunicación y garantizar que el proceso de intercambio de datos se realice sin errores luego de que se haya establecido la conexión.</p>
+        <p><b>Mensajes HTTP:</b> son los medios por los cuales se intercambiará información entre las partes. Estos mensajes HTTP deben responder a una estructura en particular definidos en el estándar.</p>
+        <p>Veamos un ejemplo de un mensaje de petición <b>(sin cuerpo):</b></p>
+        <p>GET /index.html HTTP/1.1</p>
+        <p>Host: wikipedia.org</p>
+        <p>Accept: text/html</p>
+        <p>En este ejemplo estamos solicitando el recurso <b>/index.html de wikipedia.org</b>. La primera línea del mensaje de petición se compone de:</p>
+        <p><li>El verbo (en este caso GET).</li></p>
+        <p><li>El recurso (en este caso /index).</li></p>
+        <p><li>La versión de HTTP (en este caso HTTP/1.1).</li></p>
+        <p><b> Ahora veamos un ejemplo de un mensaje de respuesta:</b></p>
+        <p>HTTP/1.1 200 OK</p>
+        <p>Server: wikipedia.org</p>
+        <p>Content-Type: text/html</p>
+        <p>Content-Lenght: 2026</p>
+        <p>< html ></p>
+        <p>...</p>
+        <p>< /html ></p>
+        <p>La primera línea del mensaje de respuesta se compone de:</p>
+        <p><li>La versión de HTTP (HTTP/1.1).</li></p>
+        <p><li>El código de respuesta (200 OK).</li></p>
+        <p><b>El verbo HTTP:</b> la primera línea de un mensaje de petición empieza con un verbo <b>(también se le conoce como método)</b>. Los verbos definen la acción que se quiere realizar sobre el recurso.</p>
+        <p>Los verbos más comunes son:</p>
+        <p><b>Los encabezados:</b> brindan información adicional sobre la petición o la respuesta. Los encabezados tienen la siguiente sintaxis:</p>
+        <p><b>[nombre del encabezado]: [valor del encabezado]</b></p>
+        <p>Encabezados comunes incluyen:</p>
+        <p><li><b>Content-Type:</b> el tipo de contenido que se está enviando en el cuerpo de un mensaje de petición, por ejemplo, text/html.</li></p>
+        <p><li><b>Accept:</b> el tipo de contenido que el cliente está esperando.</li></p>
+        <p><li><b>User-Agent:</b> el tipo de navegador que está haciendo la petición.</li></p>
+        <p><b>URL.</b> Un URL (Uniform Resource Locator) se utiliza para ubicar un recurso en Internet. Los URLs no solo se pueden utilizar para el protocolo HTTP, se utilizan en muchos otros protocolos. </p>
+        <p><li><b>Esquema.</b></li>El esquema define el protocolo a utilizar, para HTTP puede ser http o https (el protocolo seguro de HTTP).</p>
+        <p><li><b>Host.</b></li>La IP o el nombre del servidor que se quiere acceder (p.e. 127.0.0.1, localhost, google.com, www.google.com.co, etc.)</p>
+        <p><li><b>Puerto.</b></li>El puerto en el que está escuchando el servidor HTTP. Si se omite se asume que es el 80.</p>
+        <p><li><b>Path.</b></li>La ruta al recurso que se quiere acceder.</p>
+        <p><li><b>Query String.</b></li>Contiene información adicional para el servidor en forma de propiedades (atributo = valor). Las propiedades se separan por &.</p>
+        <p><li><b>Fragmento.</b></li>La referencia a una ubicación interna del documento.</p>
+        <p><i>Línea de Petición-</i>Contiene información de la acción que vamos a realizar hacía la otra entidad mediante métodos, que básicamente es la acción que se va a realizar como por ejemplo obtener información o actualizarla. Además, contiene la versión HTTP que se va a utilizar.</p>
+        <p><i>Cabecera HTTP-</i>Son parámetros que se envían hacía la otra entidad proporcionando información esencial sobre la transacción en curso. Estas cabeceras se forman bajo la sintaxis <b>Cabeceras: Valor</b> y son generadas automáticamente por el navegador al realizar una petición. </p>
+        <p>Información en las <b>cabeceras:</b></p>
+        <p><li>Tipo de contenido que se aceptan.</li></p>
+        <p><li>Tamaño del contenido de la petición en bytes.</li></p>
+        <p><li>Fecha de la petición.</li></p>
+        <p><li>Nombre del dominio o dirección IP.</li></p>
+        <p><li>Información del navegador o sistema operativo.</li></p>
+        <p><i>Cuerpo HTTP-</i>Es información adicional que vamos a enviar a la otra entidad, destacando que podemos enviar prácticamente cualquier grupo de datos a libertad y en cualquier formato compatible con el protocolo <b>(XML, JSON, Texto plano, entre otros)</b>.</p>
+        <p>Información en el cuerpo:</p>
+        <p><li>Usuario y contraseña.</li></p>
+        <p><li>Datos y contraseñas.</li></p>
+        <p><li>Archivos.</li></p>
+        </div>
+        <div>
+        <h2>MÉTODOS DE PETICIÓN.</h2>
+        <p>HTTP define un conjunto de métodos de petición para indicar la acción que se desea realizar para un recurso determinado. Aunque estos también pueden ser sustantivos, estos métodos de solicitud a veces son llamados <b>HTTP verbs</b>.</p>
+        <p><i><b>GET - </b></i>Este método del protocolo HTTP solicita una representación de un recurso determinado. Las peticiones que utilicen el método GET, solo deben ser usadas para la recuperación de información, por lo que no pueden incluir datos.</p>
+        <p><i><b>POST - </b></i>Tiene la función de enviar datos para que sean procesados en un recurso especificado, lo que usualmente trae como consecuencia efectos secundarios en el servidor, como por ejemplos, cambios en su estado.</p>
+        <p><i><b>PUT - </b></i>Se encarga de reemplazar las representaciones que tenga el recurso de destino con la carga útil de la petición realizada.</p>
+        <p><i><b>CONNECT - </b></i>Tiene la función de establecer un túnel hacia el servidor que haya sido identificado con el recurso.</p>
+        <p><i><b>DELETE - </b></i>Estará a cargo de eliminar un recurso especificado por el usuario.</p>
+        <p><i><b>OPTIONS - </b></i>Es usado con el fin de describir las opciones de comunicación que tiene el recurso de destino.</p>
+        <p><i><b>PATCH - </b></i>Es utilizado para aplicar modificaciones parciales a un recurso.</p>
+        <p><i><b>TRACE - </b></i>Realiza una prueba de bucle de retorno de mensaje a lo largo de la ruta al recurso de destino.</p>
+        <P><i><b>HEAD - </b></i>Pide una respuesta idéntica a la de una petición GET, pero sin el cuerpo de la respuesta.</P>
+        <p><b>Arquitectura cliente servidor: </b>El protocolo HTTP funciona sobre una arquitectura cliente-servidor. Esta arquitectura se basa en una relación de comunicación entre dos entidades: el cliente y el servidor.</p>
+        <p><i>Cliente Web - </i>Es cualquier software que es capaz de acceder a un servidor y recuperar información en la web. Uno de los clientes más conocidos y utilizados para esta labor es el navegador web, aunque no es el único, existen otros clientes compatibles con el protocolo HTTP; como por ejemplo, la herramienta <b>Curl</b> disponible en la mayoría de los sistemas basados en Unix.</p>
+        <p><i>Servidor Web - </i>Un servidor web es un servidor conectado al internet que espera permanentemente de solicitudes HTTP. Este servidor conoce y entiende este protocolo debido a un software instalado que está activamente escuchando. Uno de los software más conocidos y utilizados que se instalan en el servidor es <b>Ngnix</b>. Este software es capaz de interpretar las solicitudes HTTP y a su vez, enviar una respuesta al cliente que solicita un recurso.</p>
+        </div>
+        <div>
+        <h2>CÓDIGOS DE RESPUESTA.</h2>
+        <p>Para cada petición el servidor devuelve un código de respuesta con la información del recurso que haya sido solicitado.</p>
+        <p><b>1xx: </b>son respuestas informativas.</p>
+        <p><b>2xx: </b>refiere a la respuesta correcta.</p>
+        <p><b>3xx: </b>respuesta de redirección.</p>
+        <p><b>4xx: </b>supone algún error causado por el cliente.</p>
+        <p><b>5xx: </b>se refiere a un error ocasionado por el servidor.</p>
+        <p><b>Respuesta HTTP y código de estado.</b></p>
+        <p>El mensaje de solicitud y respuesta HTTP cumplen con las mismas 3 estructuras principales; Línea de petición, cabeceras y cuerpo, pero la única salvedad o es que envían un dato adicional llamado código de estado.</p>
+        <p>El código de estado es una información compuesta de 3 números, que básicamente te permiten saber cómo fueron las cosas cuando recibió la solicitud. Uno de los códigos más conocidos es número 404 o 500. Muchos usuarios se han encontrado con estos códigos al navegar por el internet.</p>
+        <p><b>Los estados más frecuentes en conjunto de su descripción:</b></p>
+        <p><i><b>200: </b></i>La solicitud ha sido recibida, entendida y procesada correctamente.</p>
+        <p><i><b>401: </b></i>No autorizado credenciales inválidas.</p>
+        <p><i><b>403: </b></i>Prohibido credenciales insuficientes no tiene permisos para acceder.</p>
+        <p><i><b>404: </b></i>Recurso no encontrado.</p>
+        <p><i><b>500: </b></i>Hubo un error en el servidor y la solicitud no pudo ser completada.</p>
+        <p><b>HTTPS en ayuda de la seguridad.</b></p>
+        <p><b>Códigos de estado 100: </b>Un código de estado de nivel 100 te dice que la solicitud que has hecho al servidor sigue en curso por alguna razón.</p>
+        <p><b>100. <i>Continuar:</i></b>Esto significa que el servidor en cuestión ha recibido las cabeceras de solicitud de tu navegador, y ahora está listo para que el cuerpo de la solicitud sea enviado también. Esto hace que el proceso de solicitud sea más eficiente ya que evita que el navegador envíe una solicitud de cuerpo aunque los encabezados hayan sido rechazados.</p>
+        <p><b>101. <i>Cambiando protocolos: </i></b>Tu navegador ha pedido al servidor que cambie los protocolos, y el servidor ha cumplido.</p>
+        <p><b>103. <i>Primeros avisos: </i></b>Esto devuelve algunos encabezados de respuesta antes de que el resto de la respuesta del servidor esté lista.</p>
+        <p><b>CÓDIGOS DE ESTADO 200: </b>Este es el mejor tipo de código de estado HTTP que se puede recibir. Una respuesta de nivel 200 significa que todo funciona exactamente como debería.</p>
+        <p><b>200. <i>Todo está bien: </i></b>Este es el código que se entrega cuando una página web o recurso actúa exactamente como se espera.</p>
+        <p><b>201. <i>Creado: </i></b>El servidor ha cumplido con la petición del navegador y, como resultado, ha creado un nuevo recurso.</p>
+        <p><b>202. <i>Aceptado: </i></b>El servidor ha aceptado la solicitud de tu navegador pero aún la está procesando. La solicitud puede, en última instancia, dar lugar o no a una respuesta completa.</p>
+        <p><b>203. <i>Información no autorizada: </i></b>Este código de estado puede aparecer cuando se utiliza un apoderado. Significa que el servidor proxy recibió un código de estado de 200 "Todo está bien" del servidor de origen, pero ha modificado la respuesta antes de pasarla a su navegador.</p>
+        <p><b>204. <i>Sin contenido: </i></b>Este código significa que el servidor ha procesado con éxito la solicitud, pero no va a devolver ningún contenido.</p>
+        <p><b>205. <i>Restablecer el contenido: </i></b> Como un código 204, esto significa que el servidor ha procesado la solicitud pero no va a devolver ningún contenido. Sin embargo, también requiere que tu navegador restablezca la vista del documento.</p>
+        <p><b>206. <i>Contenido parcial: </i></b>Puedes ver este código de estado si tu cliente HTTP (también conocido como tu navegador) usa cabeceras de rango. Esto permite a tu navegador reanudar las descargas en pausa, así como dividir una descarga en múltiples flujos. Se envía un código 206 cuando un encabezado de rango hace que el servidor envíe sólo una parte del recurso solicitado.</p>
+        <p><b>CÓDIGOS DE ESTADO 300: </b>La redirección es el proceso utilizado para comunicar que un recurso ha sido trasladado a una nueva ubicación. Hay varios códigos de estado HTTP que acompañan a las redirecciones, con el fin de proporcionar a los visitantes información sobre dónde encontrar el contenido que están buscando.</p>
+        <p><b>300. <i>Opciones múltiples: </i></b>A veces, puede haber múltiples recursos posibles con los que el servidor puede responder para cumplir con la solicitud de su navegador. Un código de estado 300 significa que tu navegador ahora tiene que elegir entre ellos. Esto puede ocurrir cuando hay múltiples extensiones de tipo de archivo disponibles, o si el servidor está experimentando desambiguación del sentido de las palabras.</p>
+        <p><b>301. <i>El recurso solicitado ha sido trasladado permanentemente: </i></b>Este código se entrega cuando una página web o un recurso ha sido reemplazado permanentemente por un recurso diferente. Se utiliza para la redirección permanente del URL.</p>
+        <p><b>302. <i>El recurso solicitado se ha movido, pero fue encontrado: </i></b>Este código se utiliza para indicar que el recurso solicitado se encontró, pero no en el lugar donde se esperaba. Se utiliza para la redirección temporal de la URL.</p>
+        <p><b>303. <i>Ver otros: </i></b>Para entender un código de estado 303 es necesario conocer la diferencia entre los cuatro métodos de solicitud HTTP principales. Esencialmente, un código 303 le dice a tu navegador que encontró el recurso que el navegador solicitó vía POST, PUT o DELETE. Sin embargo, para recuperarlo usando GET, necesita hacer la solicitud apropiada a un URL diferente al que usó anteriormente.</p>
+        <p><b>304. <i>El recurso solicitado no ha sido modificado desde la última vez que accedió a él: </i></b>Este código le dice al navegador que los recursos almacenados en la caché del navegador no han cambiado. Se usa para acelerar la entrega de páginas web reutilizando los recursos descargados previamente.</p>
+        <p><b>307. <i>Redireccionamiento temporal: </i></b>Este código de estado ha reemplazado a 302 «Encontrado» como la acción apropiada cuando un recurso ha sido movido temporalmente a una URL diferente. A diferencia del código de estado 302, no permite que el método HTTP cambie.</p>
+        <p><b>308. <i>Redireccionamiento permanente: </i></b>El código de estado 308 es el sucesor del código 301 "Movido permanentemente". No permite que el método HTTP cambie e indica que el recurso solicitado está ahora localizado permanentemente en una nueva URL.</p>
+        <p><b>CÓDIGOS DE ESTADO 400: </b>En el nivel 400, los códigos de estado HTTP comienzan a ser problemáticos. Estos son códigos de error que especifican que hay un fallo en su navegador y/o en la solicitud.</p>
+        <p><b>400. <i>Mala petición: </i></b>El servidor no puede devolver una respuesta debido a un error del cliente. Vea nuestra guía para resolver este error.</p>
+        <p><b>401. <i>No autorizado o Se requiere autorización: </i></b>Esto es devuelto por el servidor cuando el recurso de destino carece de credenciales de autenticación válidas. Podrías ver esto si has configurado la autenticación básica de HTTP usando htpasswd.</p>
+        <p><b>402. <i>Pago requerido: </i></b>Originalmente, este código fue creado para ser usado como parte de un sistema de dinero digital. Sin embargo, ese plan nunca se llevó a cabo. En cambio, es utilizado por diversas plataformas para indicar que una solicitud no se puede cumplir, por lo general debido a la falta de los fondos necesarios. </p>
+        <p><b>403. <i>El acceso a ese recurso está prohibido: </i></b> Este código se devuelve cuando un usuario intenta acceder a algo a que no tiene permiso para ver. Por ejemplo, intentar acceder a un contenido protegido por contraseña sin registrarse podría producir un error 403.</p>
+        <p><b>404. <i>No se encontró el recurso solicitado: </i></b> Este es el mensaje de error más común de todos ellos. Este código significa que el recurso solicitado no existe, y el servidor no sabe si alguna vez existió.</p>
+        <p><b>405. <i>Método no permitido: </i></b>Esto se genera cuando el servidor de alojamiento (servidor de origen) soporta el método recibido, pero el recurso de destino no lo hace.</p>
+        <p><b>406. <i>Respuesta no aceptable: </i></b>El recurso solicitado es capaz de generar sólo contenido que no es aceptable según los encabezamientos de aceptación enviados en la solicitud.</p>
+        <p><b>407. <i>Se requiere autenticación de proxy: </i></b>Se está utilizando un servidor proxy que requiere que el navegador se autentifique antes de continuar.</p>
+        <p><b>408. <i>El servidor se agotó esperando el resto de la petición del navegado: </i></b>Este código se genera cuando un servidor se apaga mientras espera la solicitud completa del navegador. En otras palabras, el servidor no recibió la solicitud completa que fue enviada por el navegador. Una posible causa podría ser la saturación de la red, lo que provoca la pérdida de paquetes de datos entre el navegador y el servidor.</p>
+        <p><b>409. <i>Conflicto: </i></b>Un código de estado 409 significa que el servidor no pudo procesar la solicitud de su navegador porque hay un conflicto con el recurso correspondiente. Esto ocurre a veces debido a múltiples ediciones simultáneas.</p>
+        <p><b>410. <i>El recurso solicitado se ha ido y no volverá: </i></b> Esto es similar a un código 404 "No encontrado", excepto que un 410 indica que la condición es esperada y permanente.</p>
+        <p><b>411. <i>Longitud requerida: </i></b>Esto significa que el recurso solicitado requiere que el cliente especifique una cierta longitud y que no lo hizo.</p>
+        <p><b>412. <i>La condición previa falló: </i></b>Tu navegador incluyó ciertas condiciones en sus encabezados de solicitud, y el servidor no cumplió con esas especificaciones.</p>
+        <p><b>413. <i>Carga útil demasiado grande: </i></b>Su solicitud es más grande de lo que el servidor está dispuesto o es capaz de procesar.</p>
+        <p><b>414. <i>URI demasiado largo: </i></b>Esto suele ser el resultado de una solicitud GET que ha sido codificada como una cadena de consulta demasiado grande para que el servidor la procese.</p>
+        <p><b>415. <i>Tipo de medios de comunicación sin apoyo: </i></b>La solicitud incluye un tipo de medio que el servidor o recurso no soporta.</p>
+        <p><b>416. <i>Rango no satisfactorio: </i></b>Su solicitud fue por una porción de un recurso que el servidor no puede devolver.</p>
+        <p><b>417. <i>La expectativa la fracasó: </i></b>El servidor no puede cumplir los requisitos especificados en el campo de cabecera de la solicitud.</p>
+        <p><b>418. <i>Soy una tetera: </i></b>Este código es devuelto por las teteras que reciben solicitudes para preparar café. </p>
+        <p><b>422. <i>Entidad no procesable: </i></b>La solicitud del cliente contiene errores semánticos, y el servidor no puede procesarla.</p>
+        <p><b>425. <i>Demasiado pronto: </i></b>Este código se envía cuando el servidor no está dispuesto a procesar una solicitud porque puede ser reproducida.</p>
+        <p><b>426. <i>Se requiere actualización: </i></b>Debido al contenido del campo de cabecera de la solicitud, el cliente debería cambiar a un protocolo diferente.</p>
+        <p><b>428. <i>Se requiere condición previa: </i></b>El servidor requiere que se especifiquen las condiciones antes de procesar la solicitud.Esto es generado por el servidor cuando el usuario ha enviado demasiadas solicitudes en un determinado período de tiempo (con límite de velocidad). Esto puede ocurrir a veces debido a los bots o scripts que intentan acceder a tu sitio.</p>
+        <p><b>429. <i>Demasiadas peticiones: </i></b>Esto es generado por el servidor cuando el usuario ha enviado demasiadas solicitudes en un determinado período de tiempo (con límite de velocidad). Esto puede ocurrir a veces debido a los bots o scripts que intentan acceder a tu sitio.</p>
+        <p><b>431. <i>Campos de la Cabecera de la Solicitud Demasiado Grandes: </i></b>El servidor no puede procesar la solicitud porque los campos de cabecera son demasiado grandes. Esto puede indicar un problema con un solo campo de cabecera, o con todos en general.</p>
+        <p><b>451. <i>No disponible por razones legales: </i></b>El operador del servidor ha recibido una demanda para prohibir el acceso al recurso que has solicitado (o a un conjunto de recursos, incluido el que has solicitado).</p>
+        <p><b>499. <i>Solicitud de cliente cerrada: </i></b>Esto es devuelto por NGINX cuando el cliente cierra la solicitud mientras Nginx aún la está procesando.</p>
+        <p><b>CÓDIGOS DE ESTADO 500: </b>Los códigos de estado de nivel  500 también se consideran errores. Sin embargo, denotan que el problema está en el extremo del servidor. Esto puede hacer que sean más difíciles de resolver.</p>
+        <p><b>500. <i>Hubo un error en el servidor y la solicitud no pudo ser completada: </i></b>Este es un código genérico que simplemente significa «error interno del servidor». Algo salió mal en el servidor y el recurso solicitado no fue entregado. Este código es típicamente generado por plugins de terceros, PHP defectuoso, o incluso la ruptura de la conexión a la base de datos.</p>
+        <p><b>HTTP</b> si bien es cierto que es un protocolo que nos facilita la comunicación y estandarización web, tiene una pequeña desventaja la cual es la seguridad. Debido que los paquetes enviados en internet no están cifrados, pudiendo ser capturados por terceros.</p>
+        <p><b>HTTPS</b> utiliza una combinación de dos protocolos de comunicación (HTTP + SSL /TLS) que hace que cualquier información transmitida en la red se establezca como cifrada. En otras palabras, HTTPS es la versión segura.</p>  
+        </div>
+  </head>
+  </body>  
+</html>
